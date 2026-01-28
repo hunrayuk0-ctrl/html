@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>សារភាពស្នេហ៍</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .background-text {
+            position: absolute;
+            font-size: 60px;
+            color: rgba(255, 0, 0, 0.1);
+            z-index: -1;
+            pointer-events: none;
+            white-space: nowrap;
+            animation: moveText 20s linear infinite;
+        }
+        
+        @keyframes moveText {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #e60000;
+            margin-bottom: 30px;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        #yesBtn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+        }
+        
+        #noBtn:hover {
+            background-color: #d32f2f;
+            transform: scale(1.05);
+        }
+        
+        .message {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #e60000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-text">I Love You ស្រឡាញ់បងទៅ</div>
+    
+    <div class="container">
+        <h1>តើអូនស្រឡាញ់បងទេ អូនសម្លាញ់?</h1>
+        <div class="buttons">
+            <button id="yesBtn">YES</button>
+            <button id="noBtn">NO</button>
+        </div>
+        <div id="message" class="message">ចុចyesទៅហី i love u!!!</div>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const yesBtn = document.getElementById('yesBtn');
+            const noBtn = document.getElementById('noBtn');
+            const message = document.getElementById('message');
+            const backgroundTexts = document.querySelectorAll('.background-text');
+            
+            // បង្កើតអក្សរ I Love You បន្ថែមសម្រាប់ background
+            for (let i = 0; i < 20; i++) {
+                const newText = document.createElement('div');
+                newText.classList.add('background-text');
+                newText.textContent = 'ស្រឡាញ់បងទៅ បងមានបេះដូងcuteហាណាស់';
+                newText.style.top = `${Math.random() * 100}%`;
+                newText.style.animationDuration = `${15 + Math.random() * 20}s`;
+                document.body.appendChild(newText);
+            }
+            
+            yesBtn.addEventListener('click', function() {
+                window.location.href = 'https://youtu.be/ZZrR3tJRv7g?si=BzXYgOa9Sex3cdMo';
+            });
+            
+            noBtn.addEventListener('click', function() {
+                message.style.display = 'block';
+                
+                // បង្កើតអក្សរ I Love You បន្ថែមនៅពេលចុច No
+                for (let i = 0; i < 10; i++) {
+                    const newText = document.createElement('div');
+                    newText.classList.add('background-text');
+                    newText.textContent = 'ស្រឡាញ់បងទៅហី ចិត្តអាក្រក់មេះ';
+                    newText.style.top = `${Math.random() * 100}%`;
+                    newText.style.animationDuration = `${10 + Math.random() * 15}s`;
+                    document.body.appendChild(newText);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
+</html>
+</body>
+</html>
